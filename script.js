@@ -22,7 +22,15 @@ funksjonen)
 ******************************************************************************/
 
 // Skriv koden for oppgave 1 her
-
+function odd_or_even(num) {
+  if (num % 2 == 0) {
+    // Checks if a number divided by 2 has a remainder of 0. If so, then it's even.
+    return "Partall";
+  } else {
+    // If previous check returns false, then the code must be odd.
+    return "Oddetall";
+  }
+}
 /******************************************************************************
 2.
 
@@ -36,6 +44,11 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 // Skriv koden for oppgave 2 her
+const exclamation = (string) => {
+  return string.toUpperCase() + "!";
+}; // Returnerer stringen i store bokstaver og legger til utropstegn på slutten.
+
+console.log(exclamation("flower pot"));
 
 /******************************************************************************
 3.
@@ -60,7 +73,15 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 ******************************************************************************/
 
 // Skriv koden for oppgave 3 her
-
+function greeting(name, time) {
+  // Checks the criterias and runs only the code where it matches.
+  if (time < 0 || time > 23) return "Ugyldig tid";
+  else if (time >= 0 && time <= 5) return `God natt, ${name}`;
+  else if (time >= 6 && time <= 11) return `God morgen, ${name}`;
+  else if (time >= 12 && time <= 17) return `God dag, ${name}`;
+  else if (time >= 18 && time <= 23) return `God kveld, ${name}`;
+  else console.error("Feilmelding");
+}
 /******************************************************************************
 4.
 
@@ -77,7 +98,11 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
-
+const remove_first_and_last_item = (array) => {
+  array.shift(); // Removes first item
+  array.pop(); // Removes last item
+  return array;
+};
 /******************************************************************************
 5.
 
@@ -98,6 +123,11 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // Skriv koden for oppgave 5 her
+function string_manipulator(string) {
+  string.replace("vanskelig", "gøy"); // Replaces "vanskelig" with "gøy"
+  string.trim(); // Removes space in front and at the back
+  return string;
+}
 
 /******************************************************************************
 6.
@@ -123,6 +153,27 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 
 // Skriv koden for oppgave 6 her
+// Step 1:
+items.shift(); // Removes first item
+
+// Step 2:
+items.replace("Viskelær", "Linjal"); // Replaces "Viskelær" with "Linjal"
+
+// Step 3:
+items.splice(1, 2, "Markeringspenn"); // Replaces "Penn" and "Notatbok" with "Markeringspenn"
+
+// Step 4:
+let combined_string = items.join(" | "); // Joins together all items into a single string.
+
+// Bonus step:
+let e_words = []; // Sets up an empty array
+for (let i = 0; i < items.length(); i++) {
+  // Runs as many times as the lenght of the array
+  if (items[i].includes("e")) {
+    // If the current index in items contains the letter "e", then run the next code
+    e_words.push(items[i]); // Adds the word containing "e" to the e_words array
+  }
+}
 
 /******************************************************************************
 7.
@@ -149,7 +200,16 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 ******************************************************************************/
 
 // Skriv koden for oppgave 7 her
+function remove_or_add_string_from_array(array, string) {
+  const index = array.indexOf(string); // Finds the index of the string
 
+  if (index >= 0) {
+    // Checks if the index is more than -1, in other words if the string was found
+    array.splice(index, 1); // Removes 1 item at the index
+  } else {
+    array.push(string); // Adds the string to the end of the array.
+  }
+}
 /******************************************************************************
 8.
 
@@ -177,3 +237,22 @@ Returner "😎Kun primitive verdier😎".
 ******************************************************************************/
 
 // Skriv koden for oppgave 8 her
+let p = "aaa";
+function type_check(p) {
+  switch (typeof p) {
+    case "string":
+      return `😎${p}😎`;
+
+    case "number":
+      return `😎${String(p * 2)}😎`;
+
+    case "boolean":
+      if (p) {
+        return "😎Ja😎";
+      } else {
+        return "😎Slapp av😎";
+      }
+    default:
+      return "😎Kun primitive verdier😎";
+  }
+}
