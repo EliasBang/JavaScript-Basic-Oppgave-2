@@ -236,20 +236,24 @@ Returner "😎Kun primitive verdier😎".
 
 // Skriv koden for oppgave 8 her
 function type_check(p) {
-  switch (typeof p) {
-    case "string":
-      return `😎${p}😎`;
+  switch (
+    typeof p // Checks the type of p
+  ) {
+    case "string": // If it's a string, then
+      return `😎${p}😎`; // it returns a smiley at each end with p in the middle.
 
-    case "number":
-      return `😎${String(p * 2)}😎`;
+    case "number": // If it's a number, then
+      return `😎${String(p * 2)}😎`; // It returns a string with a smiley at each end with a doubled p in the middle.
 
-    case "boolean":
+    case "boolean": // It it's a boolean, then
       if (p) {
-        return "😎Ja😎";
+        // it checks if p is true, and if it is
+        return "😎Ja😎"; // then it returns a string.
       } else {
-        return "😎Slapp av😎";
+        // If false, then
+        return "😎Slapp av😎"; // It returns a different string.
       }
-    default:
+    default: // If no options are valid, then it returns different string.
       return "😎Kun primitive verdier😎";
   }
 }
