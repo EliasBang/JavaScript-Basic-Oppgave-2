@@ -48,8 +48,6 @@ const exclamation = (string) => {
   return string.toUpperCase() + "!";
 }; // Returnerer stringen i store bokstaver og legger til utropstegn på slutten.
 
-console.log(exclamation("flower pot"));
-
 /******************************************************************************
 3.
 
@@ -237,7 +235,6 @@ Returner "😎Kun primitive verdier😎".
 ******************************************************************************/
 
 // Skriv koden for oppgave 8 her
-let p = "aaa";
 function type_check(p) {
   switch (typeof p) {
     case "string":
