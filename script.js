@@ -23,7 +23,7 @@ funksjonen)
 
 // Skriv koden for oppgave 1 her
 function oddOrEven(num) {
-  if (num % 2 == 0) {
+  if (num % 2 === 0) {
     // Checks if a number divided by 2 has a remainder of 0. If so, then it's even.
     return "Partall";
   } else {
