@@ -201,9 +201,9 @@ function removeOrAddStringFromArray(array, string) {
 
   if (index >= 0) {
     // Checks if the index is more than -1, in other words if the string was found
-    array.splice(index, 1); // Removes 1 item at the index
+    return array.splice(index, 1); // Removes 1 item at the index
   } else {
-    array.push(string); // Adds the string to the end of the array.
+    return array.push(string); // Adds the string to the end of the array.
   }
 }
 /******************************************************************************
