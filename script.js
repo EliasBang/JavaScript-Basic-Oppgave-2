@@ -153,10 +153,10 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 items.shift(); // Removes first item
 
 // Step 2:
-items.replace("Viskelær", "Linjal"); // Replaces "Viskelær" with "Linjal"
+items[2] = "Linjal"; // Replaces "Viskelær" with "Linjal"
 
 // Step 3:
-items.splice(1, 2, "Markeringspenn"); // Replaces "Penn" and "Notatbok" with "Markeringspenn"
+items.splice(0, 2, "Markeringspenn"); // Replaces "Penn" and "Notatbok" with "Markeringspenn"
 
 // Step 4:
 let combinedString = items.join(" | "); // Joins together all items into a single string.
