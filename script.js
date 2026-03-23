@@ -122,9 +122,7 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 // Skriv koden for oppgave 5 her
 function stringManipulator(string) {
-  string.replace("vanskelig", "gøy"); // Replaces "vanskelig" with "gøy"
-  string.trim(); // Removes space in front and at the back
-  return string;
+  return string.replace("vanskelig", "gøy").trim(); // Replaces "vanskelig" with "gøy" and removes space in front and at the back
 }
 
 /******************************************************************************
