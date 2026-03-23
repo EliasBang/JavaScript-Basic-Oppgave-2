@@ -22,7 +22,7 @@ funksjonen)
 ******************************************************************************/
 
 // Skriv koden for oppgave 1 her
-function odd_or_even(num) {
+function oddOrEven(num) {
   if (num % 2 == 0) {
     // Checks if a number divided by 2 has a remainder of 0. If so, then it's even.
     return "Partall";
@@ -96,7 +96,7 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
-const remove_first_and_last_item = (array) => {
+const removeFirstAndLastItem = (array) => {
   array.shift(); // Removes first item
   array.pop(); // Removes last item
   return array;
@@ -121,7 +121,7 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // Skriv koden for oppgave 5 her
-function string_manipulator(string) {
+function stringManipulator(string) {
   string.replace("vanskelig", "gøy"); // Replaces "vanskelig" with "gøy"
   string.trim(); // Removes space in front and at the back
   return string;
@@ -161,15 +161,15 @@ items.replace("Viskelær", "Linjal"); // Replaces "Viskelær" with "Linjal"
 items.splice(1, 2, "Markeringspenn"); // Replaces "Penn" and "Notatbok" with "Markeringspenn"
 
 // Step 4:
-let combined_string = items.join(" | "); // Joins together all items into a single string.
+let combinedString = items.join(" | "); // Joins together all items into a single string.
 
 // Bonus step:
-let e_words = []; // Sets up an empty array
+let eWords = []; // Sets up an empty array
 for (let i = 0; i < items.length(); i++) {
   // Runs as many times as the lenght of the array
   if (items[i].includes("e")) {
     // If the current index in items contains the letter "e", then run the next code
-    e_words.push(items[i]); // Adds the word containing "e" to the e_words array
+    eWords.push(items[i]); // Adds the word containing "e" to the e_words array
   }
 }
 
@@ -198,7 +198,7 @@ Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 ******************************************************************************/
 
 // Skriv koden for oppgave 7 her
-function remove_or_add_string_from_array(array, string) {
+function removeOrAddStringFromArray(array, string) {
   const index = array.indexOf(string); // Finds the index of the string
 
   if (index >= 0) {
@@ -235,7 +235,7 @@ Returner "😎Kun primitive verdier😎".
 ******************************************************************************/
 
 // Skriv koden for oppgave 8 her
-function type_check(p) {
+function typeCheck(p) {
   switch (
     typeof p // Checks the type of p
   ) {
